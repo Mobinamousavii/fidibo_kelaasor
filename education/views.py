@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.http.response import HttpResponse
 
-# Create your views here.
+def education(request):
+    return HttpResponse("Hi,you can choose your topic for your education.")
+
+def education_topic(request, topic):
+    return HttpResponse(f"This page is for {topic} education.")
