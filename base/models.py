@@ -1,6 +1,7 @@
 from django.db import models
 from ebooks.models import Ebooks
 from audiobooks.models import Audio_books
+from magazines.models import Magazines
 
 
 class Book(models.Model):
