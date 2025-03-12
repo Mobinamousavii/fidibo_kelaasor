@@ -1,4 +1,7 @@
 from django.db import models
+from ebooks.models import Ebooks
+from audiobooks.models import Audio_books
+
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
