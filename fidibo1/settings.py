@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'audiobooks',
     'education',
     'fidiplus',
-    
+    'base',
 ]
 
 MIDDLEWARE = [
