@@ -1,4 +1,4 @@
 from django.db import models
-
-class Magazines(models.Model):
+from base.models import Book
+class Magazines(Book):
     file = models.FileField(upload_to="magazines/")
