@@ -1,7 +1,6 @@
 from django.http.response import HttpResponse
 from accountmanage.models import Customer, Purchase
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.hashers import check_password
 import json
 
 @csrf_exempt
@@ -17,8 +16,8 @@ def login(request):
         if customer is None:
             return HttpResponse("the user was not found.")
         
-        if not check_password(password,customer.password):
-            return HttpResponse("your password is incorrect.")
+        if customer.password != password:
+            return HttpResponse("Your password is incorrect.")
         
         return HttpResponse(f"welcome {name}")
 
