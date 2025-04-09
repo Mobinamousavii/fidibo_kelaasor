@@ -25,4 +25,6 @@ urlpatterns = [
     path('fidiplus/', include("fidiplus.urls")),
     path('magazines/', include("magazines.urls")),
     path('account/', include("accountmanage.urls")),
+    path('accountmanage/', include("accountmanage.urls")),
+    path('book/', include("base.urls")),
 ]
